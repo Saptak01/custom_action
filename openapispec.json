@@ -1,0 +1,54 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "RCA Action",
+    "description": "Gets root cause analysis diagram",
+    "version": "v1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://rcademo.onrender.com"
+    }
+  ],
+  "paths": {
+    "/getRCALink": {
+      "get": {
+        "description": "Gets the root cause analysis diagram",
+        "operationId": "GetRCA",
+        "parameters": [
+          {
+            "name": "title",
+            "in": "query",
+            "description": "create an appropriate title for the problem",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "description": "what the problem is to generate the root cause analysis diagram for",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fileString",
+            "in": "query",
+            "description": "the return value of the 'encrypt' function from 'encrypt.py' under knowledge, passing the path to the csv file as the parameter in the 'encrypt' function",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "deprecated": "false"
+      }
+    }
+  },
+  "components": {
+    "schemas": {}
+  }
+}

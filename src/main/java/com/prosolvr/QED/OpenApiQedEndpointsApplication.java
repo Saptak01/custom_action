@@ -23,10 +23,10 @@ public class OpenApiQedEndpointsApplication {
 		ApplicationContext ctx = SpringApplication.run(OpenApiQedEndpointsApplication.class, args);
 		appContext = ctx;
 
-		FileInputStream fis = new FileInputStream("/Users/ulhaschamkeri/downloads/causes_main.csv");
-		String s = new String(fis.readAllBytes());
-		fis.close();
-		CsvXLSXConverter converter = new CsvXLSXConverter(s);
-		System.out.println(converter.generateFile());
+//		FileInputStream fis = new FileInputStream("/Users/ulhaschamkeri/downloads/causes_main.csv");
+//		String s = new String(fis.readAllBytes());
+//		fis.close();
+//		CsvXLSXConverter converter = new CsvXLSXConverter(s);
+//		System.out.println(converter.generateFile());
 	}
 }
