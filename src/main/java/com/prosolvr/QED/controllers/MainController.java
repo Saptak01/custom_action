@@ -1,5 +1,6 @@
 package com.prosolvr.QED.controllers;
 
+import com.google.gson.JsonObject;
 import com.prosolvr.QED.models.RCARequestBody;
 import com.prosolvr.QED.utils.CsvXLSXConverter;
 import com.prosolvr.QED.utils.QEDProblemCreator;
@@ -27,7 +28,9 @@ public class MainController {
             long problemId = QEDProblemCreator.createProblem(problemTitle, problemDescription);
             long snapShotId = QEDProblemCreator.getSnapshotId(problemId);
             QEDProblemCreator.importFromMSExcel(problemId, folderPath);
-            return "success";
+            JsonObject response = new JsonObject();
+            response.addProperty("url", "https://app.prosolvr.tech/#/alerts/" + problemId + "/Fishbone");
+            return response.toString();
         } catch (Exception e) {
             e.printStackTrace();
             return "error";

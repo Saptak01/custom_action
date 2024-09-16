@@ -13,7 +13,7 @@ import java.net.URI;
 
 public class QEDProblemCreator {
 
-    private static String authz = "mI89EF4+zkA+LPpL/Wm2YLrjVCjRCCteMRH2V2fpMAUlwkukG5pb2ia7srCAHoL85ekRHDFGGRJPXQj0mOqsOQ==";
+    private static String authz = "NrMZbsEi5GaUqUVk16ryQR8DMyZedR+OXVc7F+M6YiZ6fTT8yf82bFisQTBzanmh6W5GxNXc5PswWahLutCUJQ==";
 
     public static long createProblem(String problemTitle, String problemDesc) throws Exception {
         CloseableHttpClient httpclient = HttpClients.createDefault();
@@ -68,11 +68,7 @@ public class QEDProblemCreator {
         httpPost.addHeader("Content-Type", "application/json");
         JsonObject rqParams = new JsonObject();
         rqParams.addProperty("fishboneId", problemId);
-        rqParams.addProperty("boundary", "");
-        rqParams.addProperty("nodeId", "");
-        rqParams.addProperty("status_legend", "");
-        rqParams.addProperty("color_legend", "");
-        rqParams.addProperty("isExcelImport", 1);
+        rqParams.addProperty("isExcelImport", "1");
         rqParams.addProperty("problemId", String.valueOf(problemId));
         rqParams.addProperty("topMatchesToConsider", 0);
         rqParams.addProperty("accountId", "782841846");
@@ -80,12 +76,7 @@ public class QEDProblemCreator {
         rqParams.addProperty("file", CsvXLSXConverter.readFromExcelAndEncodeBase64(uniqueExcelPath));
         rqParams.addProperty("user_timeZone", "America/Los_Angeles");
         rqParams.addProperty("fileName", "causes.xlsx");
-        StringEntity bodyEntity = new StringEntity(rqParams.toString());
-        System.out.println(bodyEntity);
-        System.out.println(rqParams.toString());
         httpPost.setEntity(new StringEntity(rqParams.toString()));
-
-        CloseableHttpResponse response = httpclient.execute(httpPost);
-        System.out.println(response.getStatusLine().toString());
+        httpclient.execute(httpPost);
     }
 }
