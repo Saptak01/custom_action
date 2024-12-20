@@ -9,18 +9,18 @@ public class HttpHeadersConfig {
     @Bean(name = "cookie")
     @Lazy
     public String getHttpReqCookieAuth() {
-        return "authz_token=GqFELbKMnnFK+LeK8RbQc0HZhIdQleDlJge/+3foK3ccDnxKRbTFsbGtq06u1gC1fo2RaWlBdYT/k21XkazcEA==";
+        return "authz_token=c2ObocL1vN/Ak4yKoWaIHDxTpoA9/Fy/h9Nr9rrZXIRgGoq7VR9sF9x7AZ02yslc7131y1oHCUX61gnYSnIgjw==";
     }
 
     @Bean(name = "accountId")
     @Lazy
     public String getAccId() {
-        return "711893038";
+        return "145888242";
     }
 
     @Bean(name = "applicationId")
     @Lazy
     public String appId() {
-        return "497271765";
+        return "565105925";
     }
 }
