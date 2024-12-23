@@ -7,6 +7,7 @@ import com.prosolvr.QED.utils.QEDProblemCreator;
 import jakarta.servlet.http.HttpServletRequest;
 import org.apache.commons.codec.binary.Base64;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MainController {
 
-    @PostMapping(path = "/getRCALink", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(path = "/getRCALink", produces = MediaType.APPLICATION_JSON_VALUE)
     public String getRCADiagramLink(HttpServletRequest req) {
         try {
             String problemTitle = req.getParameter("title");
