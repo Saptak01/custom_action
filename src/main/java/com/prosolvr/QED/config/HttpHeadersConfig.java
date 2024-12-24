@@ -9,7 +9,7 @@ public class HttpHeadersConfig {
     @Bean(name = "cookie")
     @Lazy
     public String getHttpReqCookieAuth() {
-        return "authz_token=bLxdzBSp+0LZ46qrXriQ6RdZbiEq6SVWfs6F6vXz/ca0EsLQ37VeUbYNW312PFIQ4QF/6DfkrYfrhGMuBsxmGw==";
+        return "authz_token=ewEYrDrBWclHrEIN60yaaVWaQXwF9IHxqN4CWyRErOXIVN8pRl8lOU+1M6mwx5oRZrXxhp1ObyB1DiyUy3+qXQ==";
     }
 
     @Bean(name = "accountId")
