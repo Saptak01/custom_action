@@ -13,14 +13,14 @@ import java.net.URI;
 
 public class QEDProblemCreator {
 
-    private static String authz = "NrMZbsEi5GaUqUVk16ryQR8DMyZedR+OXVc7F+M6YiZ6fTT8yf82bFisQTBzanmh6W5GxNXc5PswWahLutCUJQ==";
+    private static String authz = "ewEYrDrBWclHrEIN60yaaVWaQXwF9IHxqN4CWyRErOXIVN8pRl8lOU+1M6mwx5oRZrXxhp1ObyB1DiyUy3+qXQ==";
 
     public static long createProblem(String problemTitle, String problemDesc) throws Exception {
         CloseableHttpClient httpclient = HttpClients.createDefault();
         HttpPost httpPost = new HttpPost("https://app.prosolvr.tech/server/problem/skeleton/upload?username=gasgasgasjr@gmail.com");
         JsonObject rqParams = new JsonObject();
-        rqParams.addProperty("accountId", "782841846");
-        rqParams.addProperty("appId", 760998598);
+        rqParams.addProperty("accountId", "145888242");
+        rqParams.addProperty("appId", 565105925);
         rqParams.addProperty("problemTitle", problemTitle);
         rqParams.addProperty("problemTime", System.currentTimeMillis());
         rqParams.addProperty("problemNumber", "PROB-2023-09-11 12:31:23");
