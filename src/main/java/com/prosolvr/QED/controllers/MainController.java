@@ -34,7 +34,7 @@ public class MainController {
             return response.toString();
         } catch (Exception e) {
             e.printStackTrace();
-            return e.printStackTrace();
+            return e;
         }
     }
 
