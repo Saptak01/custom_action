@@ -16,6 +16,7 @@ public class MainController {
 
     @PostMapping(path = "/getRCALink", produces = MediaType.APPLICATION_JSON_VALUE)
     public String getRCADiagramLink(HttpServletRequest req) {
+        System.out.println("Executing MainController");
         try {
             String problemTitle = req.getParameter("title");
             String problemDescription = req.getParameter("description");
@@ -33,7 +34,7 @@ public class MainController {
             return response.toString();
         } catch (Exception e) {
             e.printStackTrace();
-            return "error";
+            return e.printStackTrace();
         }
     }
 
