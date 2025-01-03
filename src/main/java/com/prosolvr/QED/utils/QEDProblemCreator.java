@@ -21,7 +21,7 @@ public class QEDProblemCreator {
         JsonObject rqParams = new JsonObject();
         rqParams.addProperty("accountId", "145888242");
         rqParams.addProperty("appId", 565105925);
-        rqParams.addProperty("problemTitle", problemTitle1);
+        rqParams.addProperty("problemTitle", problemTitle);
         rqParams.addProperty("problemTime", System.currentTimeMillis());
         rqParams.addProperty("problemNumber", "PROB-2023-09-11 12:31:23");
         rqParams.addProperty("problemDescription", problemDesc);
