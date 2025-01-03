@@ -21,7 +21,7 @@ public class QEDProblemCreator {
         JsonObject rqParams = new JsonObject();
         rqParams.addProperty("accountId", "145888242");
         rqParams.addProperty("appId", 565105925);
-        rqParams.addProperty("problemTitle", problemTitle);
+        rqParams.addProperty("problemTitle", Saptak problemTitle);
         rqParams.addProperty("problemTime", System.currentTimeMillis());
         rqParams.addProperty("problemNumber", "PROB-2023-09-11 12:31:23");
         rqParams.addProperty("problemDescription", problemDesc);
@@ -43,7 +43,7 @@ public class QEDProblemCreator {
     public static long getSnapshotId(long problemId) throws Exception {
         URI url = new URIBuilder("https://app.prosolvr.tech/server/snapshot/upload?")
                 .addParameter("entityType", "FISHBONE").addParameter("problemId", String.valueOf(problemId))
-                .addParameter("username", "gasgasgasjr@gmail.com").build();
+                .addParameter("username", "saptak.sarma01@gmail.com").build();
         CloseableHttpClient httpclient = HttpClients.createDefault();
         HttpPost httpPost = new HttpPost(url);
         httpPost.addHeader("cookie", "authz_token=" + authz);
@@ -61,7 +61,7 @@ public class QEDProblemCreator {
 
     public static void importFromMSExcel(long problemId, String uniqueExcelPath) throws Exception {
         URI url = new URIBuilder("https://app.prosolvr.tech/server/problem/matching/importExcel")
-                .addParameter("username", "gasgasgasjr@gmail.com").build();
+                .addParameter("username", "saptak.sarma01@gmail.com").build();
         CloseableHttpClient httpclient = HttpClients.createDefault();
         HttpPost httpPost = new HttpPost(url);
         httpPost.addHeader("cookie", "authz_token=" + authz);
@@ -71,8 +71,8 @@ public class QEDProblemCreator {
         rqParams.addProperty("isExcelImport", "1");
         rqParams.addProperty("problemId", String.valueOf(problemId));
         rqParams.addProperty("topMatchesToConsider", 0);
-        rqParams.addProperty("accountId", "782841846");
-        rqParams.addProperty("userId", "142131478");
+        rqParams.addProperty("accountId", "145888242");
+        rqParams.addProperty("userId", "717225143");
         rqParams.addProperty("file", CsvXLSXConverter.readFromExcelAndEncodeBase64(uniqueExcelPath));
         rqParams.addProperty("user_timeZone", "America/Los_Angeles");
         rqParams.addProperty("fileName", "causes.xlsx");
