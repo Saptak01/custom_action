@@ -19,7 +19,9 @@ public class MainController {
         System.out.println("Executing MainController");
         try {
             String problemTitle = req.getParameter("title");
+            System.out.println(problemTitle);
             String problemDescription = req.getParameter("description");
+            System.out.println(problemDescription);
             String encodedFileContent = req.getParameter("fileString");
             System.out.println(encodedFileContent);
             String decodedFile = new String(Base64.decodeBase64(decode(encodedFileContent)));
