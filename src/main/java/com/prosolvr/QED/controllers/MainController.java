@@ -76,7 +76,7 @@ public class MainController {
         }
         char[] contentCharArray = content.toCharArray();
         for (int i = 0; i < contentCharArray.length; i++) {
-            if (contentCharArray[i] == ']') {
+            if (contentCharArray[i] == ' ') {
                 contentCharArray[i] = '+';
             } else if (contentCharArray[i] == '|') {
                 contentCharArray[i] = '/';
