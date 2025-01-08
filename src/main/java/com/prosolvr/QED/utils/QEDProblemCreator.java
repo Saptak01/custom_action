@@ -13,7 +13,7 @@ import java.net.URI;
 
 public class QEDProblemCreator {
 
-    private static String authz = "nN2vgdf+dQC+rY7QrZgX9gaBZkr5FCYcnfvIon484IQkYTCFKL/yOwclUdd0eGMpejPaj13o6zxDrkxxOIIWyg==";
+    private static String authz = "kYG/jYea6LTTJ/D5/LwS15ZLuNfCLDWw2nZRCurAVf08bh5BodqA3ZKhFHyzVEN6oUVwgCesSohsiHXHGQadZg==";
 
     public static long createProblem(String problemTitle, String problemDesc) throws Exception {
         CloseableHttpClient httpclient = HttpClients.createDefault();
